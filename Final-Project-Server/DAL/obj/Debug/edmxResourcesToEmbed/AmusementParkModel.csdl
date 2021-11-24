@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AmusementParkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ActivatingsForRide">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivatingDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ActivatingNum" Type="Int32" Nullable="false" />
+    <Property Name="ActivatingTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="ParticipantNum" Type="Int32" Nullable="false" />
+    <Property Name="RideManagerId" Type="Int32" Nullable="false" />
+    <Property Name="RideId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_ActivatingForRides_Users" FromRole="ActivatingsForRides" ToRole="Users" />
+    <NavigationProperty Name="Ride" Relationship="Self.FK_ActivatingsForRides_Rides" FromRole="ActivatingsForRides" ToRole="Rides" />
+    <NavigationProperty Name="RideForUsers" Relationship="Self.FK_RideForUsers_Rides" FromRole="ActivatingsForRides" ToRole="RideForUsers" />
+  </EntityType>
+  <EntityType Name="CreditDetail">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreditNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ExpirationDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="SafetyDigit" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_CreditDetails_Users" FromRole="CreditDetails" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Grading">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RideId" Type="Int32" Nullable="false" />
+    <Property Name="RecommendText" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="Grading1" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Ride" Relationship="Self.FK_Gradings_Rides" FromRole="Gradings" ToRole="Rides" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Gradings_Users" FromRole="Gradings" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="RideForUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TripId" Type="Int32" Nullable="false" />
+    <Property Name="ActivatingRideId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ActivatingsForRide" Relationship="Self.FK_RideForUsers_Rides" FromRole="RideForUsers" ToRole="ActivatingsForRides" />
+    <NavigationProperty Name="Trip" Relationship="Self.FK_RideForUsers_Trips" FromRole="RideForUsers" ToRole="Trips" />
+  </EntityType>
+  <EntityType Name="Ride">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SeatsNum" Type="Int32" Nullable="false" />
+    <Property Name="ActivatingDurationMinutes" Type="Int32" Nullable="false" />
+    <Property Name="MinAge" Type="Int32" Nullable="false" />
+    <Property Name="MaxAge" Type="Int32" Nullable="false" />
+    <Property Name="NotificationTimeMinutes" Type="Int32" Nullable="false" />
+    <Property Name="ActivatingsNum" Type="Int32" Nullable="false" />
+    <Property Name="RidesWaitingTime" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ActivatingsForRides" Relationship="Self.FK_ActivatingsForRides_Rides" FromRole="Rides" ToRole="ActivatingsForRides" />
+    <NavigationProperty Name="Gradings" Relationship="Self.FK_Gradings_Rides" FromRole="Rides" ToRole="Gradings" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Trip">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="TripDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="MembersNum" Type="Int32" Nullable="false" />
+    <Property Name="MinAge" Type="Int32" Nullable="false" />
+    <Property Name="MaxAge" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="RideForUsers" Relationship="Self.FK_RideForUsers_Trips" FromRole="Trips" ToRole="RideForUsers" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Trips_Users" FromRole="Trips" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="UserType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ActivatingsForRides" Relationship="Self.FK_ActivatingForRides_Users" FromRole="Users" ToRole="ActivatingsForRides" />
+    <NavigationProperty Name="CreditDetail" Relationship="Self.FK_CreditDetails_Users" FromRole="Users" ToRole="CreditDetails" />
+    <NavigationProperty Name="Grading" Relationship="Self.FK_Gradings_Users" FromRole="Users" ToRole="Gradings" />
+    <NavigationProperty Name="Trips" Relationship="Self.FK_Trips_Users" FromRole="Users" ToRole="Trips" />
+    <NavigationProperty Name="UserType1" Relationship="Self.FK_Users_UserTypes" FromRole="Users" ToRole="UserTypes" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_UserTypes" FromRole="UserTypes" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_ActivatingForRides_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="ActivatingsForRides" Type="Self.ActivatingsForRide" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ActivatingsForRides">
+        <PropertyRef Name="RideManagerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ActivatingsForRides_Rides">
+    <End Role="Rides" Type="Self.Ride" Multiplicity="1" />
+    <End Role="ActivatingsForRides" Type="Self.ActivatingsForRide" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rides">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ActivatingsForRides">
+        <PropertyRef Name="RideId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RideForUsers_Rides">
+    <End Role="ActivatingsForRides" Type="Self.ActivatingsForRide" Multiplicity="1" />
+    <End Role="RideForUsers" Type="Self.RideForUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActivatingsForRides">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RideForUsers">
+        <PropertyRef Name="ActivatingRideId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditDetails_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="CreditDetails" Type="Self.CreditDetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CreditDetails">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gradings_Rides">
+    <End Role="Rides" Type="Self.Ride" Multiplicity="1" />
+    <End Role="Gradings" Type="Self.Grading" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rides">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Gradings">
+        <PropertyRef Name="RideId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gradings_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Gradings" Type="Self.Grading" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Gradings">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RideForUsers_Trips">
+    <End Role="Trips" Type="Self.Trip" Multiplicity="1" />
+    <End Role="RideForUsers" Type="Self.RideForUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trips">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RideForUsers">
+        <PropertyRef Name="TripId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trips_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Trips" Type="Self.Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Trips">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_UserTypes">
+    <End Role="UserTypes" Type="Self.UserType" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="UserType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AmusementParkEntities5" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ActivatingsForRides" EntityType="Self.ActivatingsForRide" />
+    <EntitySet Name="CreditDetails" EntityType="Self.CreditDetail" />
+    <EntitySet Name="Gradings" EntityType="Self.Grading" />
+    <EntitySet Name="RideForUsers" EntityType="Self.RideForUser" />
+    <EntitySet Name="Rides" EntityType="Self.Ride" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Trips" EntityType="Self.Trip" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+    <AssociationSet Name="FK_ActivatingForRides_Users" Association="Self.FK_ActivatingForRides_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ActivatingsForRides" EntitySet="ActivatingsForRides" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ActivatingsForRides_Rides" Association="Self.FK_ActivatingsForRides_Rides">
+      <End Role="Rides" EntitySet="Rides" />
+      <End Role="ActivatingsForRides" EntitySet="ActivatingsForRides" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RideForUsers_Rides" Association="Self.FK_RideForUsers_Rides">
+      <End Role="ActivatingsForRides" EntitySet="ActivatingsForRides" />
+      <End Role="RideForUsers" EntitySet="RideForUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditDetails_Users" Association="Self.FK_CreditDetails_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="CreditDetails" EntitySet="CreditDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gradings_Rides" Association="Self.FK_Gradings_Rides">
+      <End Role="Rides" EntitySet="Rides" />
+      <End Role="Gradings" EntitySet="Gradings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gradings_Users" Association="Self.FK_Gradings_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Gradings" EntitySet="Gradings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RideForUsers_Trips" Association="Self.FK_RideForUsers_Trips">
+      <End Role="Trips" EntitySet="Trips" />
+      <End Role="RideForUsers" EntitySet="RideForUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trips_Users" Association="Self.FK_Trips_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Trips" EntitySet="Trips" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_UserTypes" Association="Self.FK_Users_UserTypes">
+      <End Role="UserTypes" EntitySet="UserTypes" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(AmusementParkModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(AmusementParkModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

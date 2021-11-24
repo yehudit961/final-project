@@ -1,0 +1,36 @@
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\obj\Debug\BL.csprojAssemblyReference.cache
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\BL.dll.config
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\BL.dll
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\BL.pdb
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\DAL.dll
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\DTO.dll
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\EntityFramework.dll
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\DAL.pdb
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\DAL.dll.config
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\DTO.pdb
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\EntityFramework.xml
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\obj\Debug\BL.csproj.CopyComplete
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\obj\Debug\BL.dll
+Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\BL\obj\Debug\BL.pdb
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\obj\Debug\BL.dll
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\obj\Debug\BL.pdb
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\BL.dll.config
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\BL.dll
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\BL.pdb
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\AutoMapper.dll
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\DAL.dll
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\DTO.dll
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\EntityFramework.dll
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\DAL.pdb
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\DAL.dll.config
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\DTO.pdb
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\AutoMapper.xml
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\EntityFramework.xml
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\BL\obj\Debug\BL.csproj.CopyComplete
