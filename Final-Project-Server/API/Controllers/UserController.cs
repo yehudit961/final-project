@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace API.Controllers
 {
+    [RoutePrefix("api/user")]
     public class UserController : ApiController
     {
         // GET api/<controller>
@@ -23,10 +24,19 @@ namespace API.Controllers
             return UserBL.GetUser(id);
         }
 
-        //// POST api/<controller>
-        //public void Post([FromBody]string value)
-        //{
-        //}
+        [Route("Login")]
+        [HttpPost]
+        public UserDTO Login([FromBody]string email,[FromBody] string password)
+        {
+            return UserBL.GetRegisteredUser(email, password);
+        }
+
+
+        // POST api/<controller>
+        public void Post([FromBody]UserDTO user)
+        {
+            UserBL.AddUser(user);
+        }
 
         //// PUT api/<controller>/5
         //public void Put(int id, [FromBody]string value)

@@ -27,5 +27,17 @@ namespace BL
             //return Converter.ConvertToDTO( UserDal.GetUser(id));
             return Conversions.Map(UserDal.GetUser(id));
         }
+
+        public static void AddUser(UserDTO user)
+        {
+            UserDal.AddUser(Conversions.Map(user));
+        }
+
+        public static UserDTO GetRegisteredUser(string email, string password)
+        {
+            return GetUsers().FirstOrDefault(user => user.Email == email && user.Password == password);
+        }
+
+
     }
 }

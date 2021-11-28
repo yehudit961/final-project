@@ -89,6 +89,9 @@
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Age" Type="int" Nullable="false" />
           <Property Name="UserType" Type="int" Nullable="false" />
         </EntityType>
@@ -386,6 +389,9 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Age" Type="Int32" Nullable="false" />
           <Property Name="UserType" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ActivatingsForRides" Relationship="Self.FK_ActivatingForRides_Users" FromRole="Users" ToRole="ActivatingsForRides" />
@@ -510,7 +516,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AmusementParkEntities5" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AmusementParkEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ActivatingsForRides" EntityType="Self.ActivatingsForRide" />
           <EntitySet Name="CreditDetails" EntityType="Self.CreditDetail" />
           <EntitySet Name="Gradings" EntityType="Self.Grading" />
@@ -603,7 +609,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AmusementParkModelStoreContainer" CdmEntityContainer="AmusementParkEntities5">
+        <EntityContainerMapping StorageEntityContainer="AmusementParkModelStoreContainer" CdmEntityContainer="AmusementParkEntities1">
           <EntitySetMapping Name="ActivatingsForRides">
             <EntityTypeMapping TypeName="AmusementParkModel.ActivatingsForRide">
               <MappingFragment StoreEntitySet="ActivatingsForRides">
@@ -694,6 +700,9 @@
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="Age" ColumnName="Age" />
                 <ScalarProperty Name="UserType" ColumnName="UserType" />
               </MappingFragment>

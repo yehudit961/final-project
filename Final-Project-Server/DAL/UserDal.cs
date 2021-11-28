@@ -10,7 +10,7 @@ namespace DAL
     {
         public static IEnumerable<User> GetUsers()
         {
-            using (AmusementParkEntities5 ctx = new AmusementParkEntities5())
+            using (AmusementParkEntities ctx = new AmusementParkEntities())
             {
                 return ctx.Users.ToList();
             }
@@ -18,10 +18,20 @@ namespace DAL
 
         public static User GetUser(int id)
         {
-            using (AmusementParkEntities5 ctx = new AmusementParkEntities5())
+            using (AmusementParkEntities ctx = new AmusementParkEntities())
             {
                 return ctx.Users.Single(u => u.Id == id);
             }
         }
+
+        public static void AddUser(User user)
+        {
+            using(AmusementParkEntities ctx = new AmusementParkEntities())
+            {
+                ctx.Users.Add(user);
+                ctx.SaveChanges();
+            }
+        }
+        
     }
 }

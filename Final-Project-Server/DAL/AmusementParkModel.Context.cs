@@ -15,10 +15,10 @@ namespace DAL
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class AmusementParkEntities5 : DbContext
+    public partial class AmusementParkEntities : DbContext
     {
-        public AmusementParkEntities5()
-            : base("name=AmusementParkEntities5")
+        public AmusementParkEntities1()
+            : base("name=AmusementParkEntities")
         {
         }
     

@@ -96,6 +96,9 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Age" Type="Int32" Nullable="false" />
     <Property Name="UserType" Type="Int32" Nullable="false" />
     <NavigationProperty Name="ActivatingsForRides" Relationship="Self.FK_ActivatingForRides_Users" FromRole="Users" ToRole="ActivatingsForRides" />
@@ -220,7 +223,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="AmusementParkEntities5" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="AmusementParkEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="ActivatingsForRides" EntityType="Self.ActivatingsForRide" />
     <EntitySet Name="CreditDetails" EntityType="Self.CreditDetail" />
     <EntitySet Name="Gradings" EntityType="Self.Grading" />
