@@ -87,7 +87,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -99,7 +99,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <Association Name="FK_ActivatingForRides_Users">
@@ -387,7 +387,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -404,7 +404,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Users_UserTypes" FromRole="UserTypes" ToRole="Users" />
         </EntityType>
@@ -516,7 +516,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AmusementParkEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AmusementParkEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ActivatingsForRides" EntityType="Self.ActivatingsForRide" />
           <EntitySet Name="CreditDetails" EntityType="Self.CreditDetail" />
           <EntitySet Name="Gradings" EntityType="Self.Grading" />
@@ -609,7 +609,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AmusementParkModelStoreContainer" CdmEntityContainer="AmusementParkEntities1">
+        <EntityContainerMapping StorageEntityContainer="AmusementParkModelStoreContainer" CdmEntityContainer="AmusementParkEntities">
           <EntitySetMapping Name="ActivatingsForRides">
             <EntityTypeMapping TypeName="AmusementParkModel.ActivatingsForRide">
               <MappingFragment StoreEntitySet="ActivatingsForRides">

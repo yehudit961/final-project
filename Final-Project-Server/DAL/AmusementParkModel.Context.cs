@@ -17,7 +17,7 @@ namespace DAL
     
     public partial class AmusementParkEntities : DbContext
     {
-        public AmusementParkEntities1()
+        public AmusementParkEntities()
             : base("name=AmusementParkEntities")
         {
         }

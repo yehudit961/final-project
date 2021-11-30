@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace API.Controllers
 {
-    [RoutePrefix("api/user")]
+    [RoutePrefix("api/user/v1")]
     public class UserController : ApiController
     {
         // GET api/<controller>
@@ -32,8 +32,8 @@ namespace API.Controllers
         }
 
 
-        // POST api/<controller>
-        public void Post([FromBody]UserDTO user)
+        [HttpPost]
+        public void Register([FromBody]UserDTO user)
         {
             UserBL.AddUser(user);
         }

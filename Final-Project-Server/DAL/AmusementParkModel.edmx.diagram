@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d06ee2ce93e1417b80f57b7585a5247e" Name="Diagram1">
+      <Diagram DiagramId="d7b2e6cd50ee47ff855bf0ef8a4caaa7" Name="Diagram1">
         <EntityTypeShape EntityType="AmusementParkModel.ActivatingsForRide" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="AmusementParkModel.CreditDetail" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AmusementParkModel.Grading" Width="1.5" PointX="8.25" PointY="6.375" IsExpanded="true" />

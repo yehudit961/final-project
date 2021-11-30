@@ -10,7 +10,6 @@ Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\DAL\bin\Debug\
 Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\DAL\obj\Debug\DAL.csproj.CopyComplete
 Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\DAL\obj\Debug\DAL.dll
 Y:\תשפא\3\גרבוז יהודית\Final-Project\Final-Project\DAL\obj\Debug\DAL.pdb
-C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DAL\obj\Debug\DAL.dll
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DAL\obj\Debug\DAL.pdb

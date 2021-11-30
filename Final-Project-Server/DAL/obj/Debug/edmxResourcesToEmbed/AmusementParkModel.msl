@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="AmusementParkModelStoreContainer" CdmEntityContainer="AmusementParkEntities1">
+  <EntityContainerMapping StorageEntityContainer="AmusementParkModelStoreContainer" CdmEntityContainer="AmusementParkEntities">
     <EntitySetMapping Name="ActivatingsForRides">
       <EntityTypeMapping TypeName="AmusementParkModel.ActivatingsForRide">
         <MappingFragment StoreEntitySet="ActivatingsForRides">
