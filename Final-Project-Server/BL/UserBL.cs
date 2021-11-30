@@ -12,9 +12,9 @@ namespace BL
     {
         public static IEnumerable<UserDTO> GetUsers()
         {
-            var list = UserDal.GetUsers().ToList();
+            var users = UserDal.GetUsers();
 
-            foreach (var item in list)
+            foreach (var item in users)
             {
                 yield return Conversions.Map(item);
 
