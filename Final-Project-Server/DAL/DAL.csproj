@@ -77,6 +77,7 @@
     <Compile Include="Ride.cs">
       <DependentUpon>AmusementParkModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="RideDal.cs" />
     <Compile Include="RideForUser.cs">
       <DependentUpon>AmusementParkModel.tt</DependentUpon>
     </Compile>
@@ -100,7 +101,6 @@
     <Compile Include="UserType.cs">
       <DependentUpon>AmusementParkModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserTypeDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="AmusementParkModel.edmx">

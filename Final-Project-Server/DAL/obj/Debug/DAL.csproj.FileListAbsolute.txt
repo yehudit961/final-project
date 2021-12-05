@@ -21,3 +21,4 @@ C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Ser
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DAL\bin\Debug\EntityFramework.xml
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
