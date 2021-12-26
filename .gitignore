@@ -25,7 +25,7 @@ yarn-error.log*
 debug.log
 
 #settings
-/.vscode
+final-project-client/.vscode
 
 # User-specific files
 *.suo
@@ -44,3 +44,4 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+packages/
