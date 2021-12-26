@@ -188,3 +188,6 @@ C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Ser
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\API\obj\Debug\API.csproj.CopyComplete
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\API\obj\Debug\API.dll
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\API\obj\Debug\API.pdb
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\API\bin\System.Web.Cors.dll
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\API\bin\System.Web.Http.Cors.dll
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\API\bin\System.Web.Http.Cors.xml

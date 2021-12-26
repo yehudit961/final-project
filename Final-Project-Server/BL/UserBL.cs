@@ -9,7 +9,7 @@ using DAL;
 namespace BL
 {
    public class UserBL
-    {
+   {
         public static IEnumerable<UserDTO> GetUsers()
         {
             var users = UserDal.GetUsers();
@@ -17,9 +17,7 @@ namespace BL
             foreach (var item in users)
             {
                 yield return Conversions.Map(item);
-
-            }
-            
+            }           
         }
 
         public static UserDTO GetUser(int id)
@@ -37,7 +35,5 @@ namespace BL
         {
             return GetUsers().FirstOrDefault(user => user.Email == email && user.Password == password);
         }
-
-
-    }
+   }
 }

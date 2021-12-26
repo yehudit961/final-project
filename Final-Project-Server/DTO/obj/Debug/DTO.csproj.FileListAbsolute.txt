@@ -9,3 +9,4 @@ C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Ser
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DTO\obj\Debug\DTO.dll
 C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DTO\obj\Debug\DTO.pdb
+C:\Users\Garbuz\Documents\יהודית\תכנות\FinalProject\Final-Project-Server\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
