@@ -3,7 +3,7 @@
 
 # dependencies
 /final-project-client/node_modules
-/.pnp
+/final-project-client/.pnp
 .pnp.js
 
 # testing
